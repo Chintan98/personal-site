@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const projects = [
+  {
+    title: "Eco-Friendly Tracker",
+    description: "A mobile application helping users track and reduce their carbon footprint through daily habits.",
+    link: "#",
+    tags: ["UX Design", "React Native", "Node.js"]
+  },
+  {
+    title: "Nordic Furniture",
+    description: "E-commerce platform implementation for a high-end furniture brand with focus on minimalism.",
+    link: "#",
+    tags: ["Web Design", "Shopify", "Liquid"]
+  },
+  {
+    title: "Architecture Portfolio",
+    description: "A clean, image-focused portfolio website for a local architecture firm.",
+    link: "#",
+    tags: ["Astro", "Tailwind CSS", "CMS"]
+  },
+  {
+    title: "Finance Dashboard",
+    description: "SaaS dashboard design for a fintech startup, focusing on data visualization and clarity.",
+    link: "#",
+    tags: ["UI Design", "Figma", "React"]
+  }
+];
+---
+
+<Layout title="Projects | Chintan">
+  <section class="py-12 md:py-20">
+    <h1 class="text-3xl md:text-5xl font-serif font-bold mb-6 text-gray-900">Selected Work</h1>
+    <p class="text-xl text-gray-600 max-w-2xl leading-relaxed mb-16">
+      A collection of projects exploring the intersection of design, technology, and user experience.
+    </p>
+    
+    <div class="flex flex-col gap-8">
+      {projects.map(project => (
+        <ProjectCard {...project} />
+      ))}
+    </div>
+  </section>
+</Layout>

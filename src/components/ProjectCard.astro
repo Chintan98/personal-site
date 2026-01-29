@@ -1,0 +1,38 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  link: string;
+  tags?: string[];
+}
+
+const { title, description, image, link, tags = [] } = Astro.props;
+---
+
+<a href={link} class="group block border-b border-gray-100 py-8 hover:bg-gray-50 -mx-4 px-4 transition-colors">
+  <div class="flex flex-col md:flex-row gap-6 items-start">
+    {image && (
+      <div class="w-full md:w-48 aspect-[4/3] bg-gray-200 overflow-hidden rounded-md flex-shrink-0">
+        <img src={image} alt={title} class="w-full h-full object-cover transition-transform group-hover:scale-105" />
+      </div>
+    )}
+    
+    <div class="flex-grow">
+      <h3 class="text-xl font-serif font-bold mb-2 group-hover:underline decoration-1 underline-offset-4">{title}</h3>
+      <p class="text-gray-600 mb-4 leading-relaxed">{description}</p>
+      
+      {tags.length > 0 && (
+        <div class="flex flex-wrap gap-2">
+          {tags.map(tag => (
+            <span class="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-1 rounded-sm uppercase tracking-wider">{tag}</span>
+          ))}
+        </div>
+      )}
+    </div>
+    
+    <div class="hidden md:block self-center opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:translate-x-1 duration-300">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    </div>
+  </div>
+</a>

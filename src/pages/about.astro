@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About | Chintan">
+  <section class="py-12 md:py-20">
+    <div class="grid md:grid-cols-2 gap-12 items-start">
+      <div>
+        <h1 class="text-3xl md:text-5xl font-serif font-bold mb-8 text-gray-900">About Me</h1>
+        <div class="prose prose-lg prose-gray text-gray-600 font-light">
+          <p class="mb-6">
+            Hello! I'm Chintan. I've always been fascinated by how design shapes our interaction with technology. My philosophy is rooted in simplicity and functionality—removing the unnecessary to focus on what matters.
+          </p>
+          <p class="mb-6">
+            With a background in both design and development, I bridge the gap between aesthetics and engineering. I believe that good code is like good design: clean, efficient, and purposeful.
+          </p>
+          <p class="mb-6">
+             When I'm not coding, you can find me exploring minimalist architecture, reading about typography, or enjoying a good cup of coffee.
+          </p>
+        </div>
+      </div>
+      
+      <div class="relative mt-8 md:mt-0">
+        <div class="aspect-[3/4] bg-gray-200 rounded-lg overflow-hidden">
+             <!-- Placeholder for profile image -->
+             <div class="w-full h-full flex items-center justify-center text-gray-400 bg-gray-100">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+             </div>
+        </div>
+        <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary/20 rounded-full -z-10"></div>
+      </div>
+    </div>
+  </section>
+</Layout>

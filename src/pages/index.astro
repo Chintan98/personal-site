@@ -1,17 +1,56 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import Newsletter from '../components/Newsletter.astro';
+import ProjectCard from '../components/ProjectCard.astro';
 
+const featuredProjects = [
+  {
+    title: "Eco-Friendly Tracker",
+    description: "A mobile application helping users track and reduce their carbon footprint through daily habits.",
+    link: "/projects",
+    tags: ["UX Design", "React Native"]
+  },
+  {
+    title: "Nordic Furniture",
+    description: "E-commerce platform implementation for a high-end furniture brand with focus on minimalism.",
+    link: "/projects",
+    tags: ["Web Design", "Shopify"]
+  }
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Chintan - Digital Designer & Developer">
+	<section class="py-20 md:py-32">
+		<h1 class="text-4xl md:text-6xl font-serif font-bold mb-6 tracking-tight text-gray-900">
+			Creating digital experiences<br/> with purpose and simplicity.
+		</h1>
+		<p class="text-xl text-gray-600 max-w-2xl leading-relaxed mb-8">
+			I'm a designer and developer based in San Francisco, specializing in building clean, functional, and user-centric interfaces.
+		</p>
+		<div class="flex gap-4">
+			<a href="/projects" class="px-6 py-3 bg-gray-900 text-white font-medium rounded-md hover:bg-gray-700 transition-colors">
+				View Work
+			</a>
+			<a href="/about" class="px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-md hover:border-gray-900 hover:text-black transition-colors">
+				More About Me
+			</a>
+		</div>
+	</section>
+
+	<section class="py-12">
+		<div class="flex justify-between items-baseline mb-8 border-b border-gray-100 pb-4">
+			<h2 class="text-2xl font-serif font-bold">Featured Projects</h2>
+			<a href="/projects" class="text-sm font-medium text-gray-500 hover:text-black transition-colors">View all &rarr;</a>
+		</div>
+		
+		<div class="flex flex-col gap-4">
+			{featuredProjects.map(project => (
+				<ProjectCard {...project} />
+			))}
+		</div>
+	</section>
+
+	<section class="py-12">
+		<Newsletter />
+	</section>
+</Layout>
