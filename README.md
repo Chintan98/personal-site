@@ -43,3 +43,4 @@ This project is ready to be deployed to [Vercel](https://vercel.com).
 1. Push this code to a GitHub repository.
 2. Import the repository in Vercel.
 3. Vercel will automatically detect Astro and configure the build settings.
+# personal-site
