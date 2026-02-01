@@ -20,20 +20,34 @@ const featuredProjects = [
 ---
 
 <Layout title="Chintan Jain - Finance Analyst & Data Strategist">
-	<section class="py-20 md:py-32">
-		<h1 class="text-4xl md:text-6xl font-serif font-bold mb-6 tracking-tight text-gray-900">
-			Turning complex data into<br/> actionable financial insights.
-		</h1>
-		<p class="text-xl text-gray-600 max-w-2xl leading-relaxed mb-8">
-			I am a finance professional specializing in financial modeling, valuation, and quantitative analysis. I help organizations make data-driven investment decisions.
-		</p>
-		<div class="flex gap-4">
-			<a href="/projects" class="px-6 py-3 bg-gray-900 text-white font-medium rounded-md hover:bg-gray-700 transition-colors">
-				View Work
-			</a>
-			<a href="/about" class="px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-md hover:border-gray-900 hover:text-black transition-colors">
-				More About Me
-			</a>
+	<section class="py-20 md:py-32 grid md:grid-cols-2 gap-12 items-center">
+		<div>
+			<h1 class="text-4xl md:text-6xl font-serif font-bold mb-6 tracking-tight text-gray-900">
+				Turning complex data into<br/> actionable financial insights.
+			</h1>
+			<p class="text-xl text-gray-600 max-w-2xl leading-relaxed mb-8">
+				I am a finance professional specializing in financial modeling, valuation, and quantitative analysis. I help organizations make data-driven investment decisions.
+			</p>
+			<div class="flex gap-4">
+				<a href="/projects" class="px-6 py-3 bg-gray-900 text-white font-medium rounded-md hover:bg-gray-700 transition-colors">
+					View Work
+				</a>
+				<a href="/about" class="px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-md hover:border-gray-900 hover:text-black transition-colors">
+					More About Me
+				</a>
+			</div>
+		</div>
+		<div class="relative">
+			<div class="aspect-square bg-gray-200 rounded-2xl overflow-hidden shadow-xl max-w-md mx-auto relative z-10">
+				<img 
+					src="/profile.jpg" 
+					alt="Chintan Jain" 
+					class="w-full h-full object-cover"
+					onerror="this.src='https://placehold.co/600x600/e2e8f0/1e293b?text=CJ'"
+				/>
+			</div>
+			<!-- Decorative background element -->
+			<div class="absolute -top-4 -right-4 w-full h-full bg-gray-100 rounded-2xl -z-0"></div>
 		</div>
 	</section>
 
