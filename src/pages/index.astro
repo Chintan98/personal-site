@@ -1,31 +1,31 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Newsletter from '../components/Newsletter.astro';
+
 import ProjectCard from '../components/ProjectCard.astro';
 
 const featuredProjects = [
   {
-    title: "Eco-Friendly Tracker",
-    description: "A mobile application helping users track and reduce their carbon footprint through daily habits.",
+    title: "Tesla (TSLA) Strategic Valuation",
+    description: "A comprehensive Discounted Cash Flow (DCF) model projecting 5-year growth, including sensitivity analysis on WACC and terminal rates.",
     link: "/projects",
-    tags: ["UX Design", "React Native"]
+    tags: ["Financial Modeling", "Excel", "Equity Research"]
   },
   {
-    title: "Nordic Furniture",
-    description: "E-commerce platform implementation for a high-end furniture brand with focus on minimalism.",
+    title: "SaaS Industry KPI Dashboard",
+    description: "Automated analysis of key metrics (CAC, LTV, Churn) across top 10 SaaS competitors using Python and Tableau.",
     link: "/projects",
-    tags: ["Web Design", "Shopify"]
+    tags: ["Python", "Data Analysis", "SQL"]
   }
 ];
 ---
 
-<Layout title="Chintan - Digital Designer & Developer">
+<Layout title="Chintan Jain - Finance Analyst & Data Strategist">
 	<section class="py-20 md:py-32">
 		<h1 class="text-4xl md:text-6xl font-serif font-bold mb-6 tracking-tight text-gray-900">
-			Creating digital experiences<br/> with purpose and simplicity.
+			Turning complex data into<br/> actionable financial insights.
 		</h1>
 		<p class="text-xl text-gray-600 max-w-2xl leading-relaxed mb-8">
-			I'm a designer and developer based in San Francisco, specializing in building clean, functional, and user-centric interfaces.
+			I am a finance professional specializing in financial modeling, valuation, and quantitative analysis. I help organizations make data-driven investment decisions.
 		</p>
 		<div class="flex gap-4">
 			<a href="/projects" class="px-6 py-3 bg-gray-900 text-white font-medium rounded-md hover:bg-gray-700 transition-colors">
@@ -50,7 +50,11 @@ const featuredProjects = [
 		</div>
 	</section>
 
-	<section class="py-12">
-		<Newsletter />
+	<section class="py-12 bg-gray-50 rounded-2xl p-8 border border-gray-100 text-center">
+		<h2 class="text-2xl font-serif font-bold mb-4">Let's Connect</h2>
+		<p class="text-gray-600 mb-6 max-w-lg mx-auto">Ready to discuss financial strategy or data analysis? Feel free to reach out.</p>
+		<a href="/contact" class="inline-block px-6 py-3 bg-gray-900 text-white font-medium rounded-md hover:bg-gray-700 transition-colors">
+			Get in Touch
+		</a>
 	</section>
 </Layout>
